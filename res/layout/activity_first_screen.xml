@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@color/bg_light_blue"
     tools:context=".FirstScreenActivity" >
 
     <!--
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
+            android:background="@color/button_dark_blue"
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
 
