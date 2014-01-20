@@ -4,5 +4,8 @@
     <string name="app_name">Meety</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="project_name">meety</string>
+    <string name="log_in_button_name">log in</string>
+    <string name="sign_up_button_name">sign up</string>
 
 </resources>

@@ -3,29 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_light_blue"
-    tools:context=".FirstScreenActivity" >
-
-    <!--
-         The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc.
-    -->
-
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <!--
-         This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-    -->
+    tools:context=".FullscreenActivity" >
+    
+    <!-- This FrameLayout is divided, first, by three RelativeLayout
+     in vertical LinearLayout. This implies three rows. -->
+     
+    <!-- The second vertical RelativeLayout (second row) is divided 
+    by three RelativeLayout in horizontal LinearLayout. This implies 
+    three columns in this row -->
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -33,22 +18,106 @@
         android:fitsSystemWindows="true" >
 
         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/button_dark_blue"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+            <!-- First row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4" >
+
+            </RelativeLayout>
+
+            <!-- Second row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <LinearLayout
+                    android:id="@+id/fullscreen_content_controls"
+                    style="?buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent" >
+
+                    <!-- Second row, first column -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4" >
+                            
+                    </RelativeLayout>
+
+                    <!-- Second row, second column -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" 
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/dummy_button"
+                            style="?buttonBarButtonStyle"
+                            android:layout_width="200dp"
+                            android:layout_height="75dp"
+                            android:background="@color/button_dark_blue"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="27dp"
+                            android:text="@string/log_in_button_name"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                        
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:background="@color/button_dark_blue"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/sign_up_button_name"
+                            android:textStyle="bold" />
+                        
+
+                    </RelativeLayout>
+
+                    <!-- Second row, third column -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4" >
+                    </RelativeLayout>
+                </LinearLayout>
+
+                
+            </RelativeLayout>
+
+            <!-- Third row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:id="@+id/fullscreen_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:text="@string/project_name"
+                    android:textColor="#33b5e5"
+                    android:textSize="50sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
         </LinearLayout>
     </FrameLayout>
 
