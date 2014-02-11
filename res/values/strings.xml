@@ -7,5 +7,6 @@
     <string name="project_name">meety</string>
     <string name="log_in_button_name">log in</string>
     <string name="sign_up_button_name">sign up</string>
+    <string name="title_activity_logged_in">LoggedInActivity</string>
 
 </resources>
