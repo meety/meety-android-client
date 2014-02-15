@@ -5,14 +5,6 @@
     android:background="#0099cc"
     tools:context=".LoggedInActivity" >
 
-    <!--
-     This FrameLayout is divided by three RelativeLayout
-     in vertical LinearLayout. This implies three rows. 
-     
-     HELP NOTE: The less you set layout_weight more area in the
-     screen will be used by this layout
- -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,8 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.4" >
-
-                   </RelativeLayout>
+        </RelativeLayout>
 
         <!-- Second row -->
 
@@ -34,7 +25,20 @@
             android:layout_height="match_parent"
             android:layout_weight="0.4" >
 
-                    </RelativeLayout>
+            <Button
+                android:id="@+id/button_session_request"
+                style="?buttonBarButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@color/button_dark_blue"
+                android:onClick="sessionRequest"
+                android:text="Session Request"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <!-- Third row -->
 
@@ -56,7 +60,6 @@
                 android:textColor="#33b5e5"
                 android:textSize="50sp"
                 android:textStyle="bold" />
-
         </RelativeLayout>
     </LinearLayout>
 
