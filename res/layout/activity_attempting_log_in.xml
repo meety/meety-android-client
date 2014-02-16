@@ -29,7 +29,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="25sp"
                 android:textStyle="bold" />
-
         </RelativeLayout>
 
         <!-- Second row -->
@@ -40,7 +39,7 @@
             android:layout_weight="0.4" >
 
             <ProgressBar
-                android:id="@+id/progressBar1"
+                android:id="@+id/progressBarView"
                 style="?android:attr/progressBarStyleLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,6 +47,18 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp" />
 
+            <TextView
+                android:id="@+id/text_login_fail"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:text="Fail to login"
+                android:textColor="#FFFFFF"
+                android:textSize="35sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Third row -->
@@ -58,7 +69,7 @@
             android:layout_weight="0.5" >
 
             <TextView
-                android:id="@+id/fullscreen_content"
+                android:id="@+id/logo_meety"
                 android:layout_width="match_parent"
                 android:layout_height="79dp"
                 android:layout_alignParentBottom="true"

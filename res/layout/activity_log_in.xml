@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_light_blue"
-    tools:context=".FullscreenActivity" >
+    tools:context=".LogInScreenActivity" >
 
     <!--
      This FrameLayout is divided by three RelativeLayout
@@ -36,7 +36,8 @@
                 android:ems="10"
                 android:gravity="center"
                 android:selectAllOnFocus="true"
-                android:textColor="@color/button_dark_blue" />
+                android:textColor="@color/button_dark_blue" 
+                android:hint="Username" />
 
             <EditText
                 android:id="@+id/text_password"
@@ -51,7 +52,8 @@
                 android:gravity="center"
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
-                android:textColor="@color/button_dark_blue" />
+                android:textColor="@color/button_dark_blue" 
+                android:hint="Password" />
         </RelativeLayout>
 
         <!-- Second row -->
@@ -72,7 +74,8 @@
                 android:background="@color/button_dark_blue"
                 android:text="@string/log_in_button_name"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold" 
+                android:onClick="attemptLogIn"/>
 
             <Button
                 android:id="@+id/button_sign_up"
@@ -94,7 +97,7 @@
             android:layout_weight="0.5" >
 
             <TextView
-                android:id="@+id/fullscreen_content"
+                android:id="@+id/logo_meety_log_in"
                 android:layout_width="match_parent"
                 android:layout_height="79dp"
                 android:layout_alignParentBottom="true"

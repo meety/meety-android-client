@@ -3,6 +3,7 @@ package com.example.meety_android_client;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,11 +27,11 @@ public class LogInScreenActivity extends Activity {
 		setContentView(R.layout.activity_log_in);
 		
 		setTextByLanguage();
-		final EditText userNameText = (EditText) findViewById(R.id.text_username);
-		final EditText passwordText = (EditText) findViewById(R.id.text_password);
-		userNameText.setText(userName);
-		passwordText.setText(passwordDefault);
 		
+		System.out.println("¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?");
+
+
+		/**
 		final Button logInButton = (Button) findViewById(R.id.button_log_in);
 		
 		System.out.println("Log In Button created");
@@ -46,6 +47,7 @@ public class LogInScreenActivity extends Activity {
                 startActivity(intent);
             }
         });
+        **/
 	}
 	
 	@Override
@@ -65,6 +67,25 @@ public class LogInScreenActivity extends Activity {
 	 */
 	private Activity getThis(){
 		return this;
+	}
+	
+	public void attemptLogIn(View view){
+		
+		// try to avoid these methods to improve performance after cliking LOG IN BUTTON
+		
+		final EditText userNameText = (EditText) findViewById(R.id.text_username);
+		final EditText passwordText = (EditText) findViewById(R.id.text_password);
+		
+		if(TextUtils.isEmpty(userNameText.getText().toString()) && TextUtils.isEmpty(passwordText.getText().toString())) {
+			userNameText.setText(userName);
+			passwordText.setText(passwordDefault);
+		}	
+
+        Intent intent = new Intent(getThis(), AttemptingLogIn.class);
+        intent.putExtra("username", userNameText.getText().toString());
+        intent.putExtra("password", passwordText.getText().toString());
+        startActivity(intent);
+		
 	}
 
 }
