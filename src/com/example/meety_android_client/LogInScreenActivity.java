@@ -41,8 +41,8 @@ public class LogInScreenActivity extends Activity {
                 System.out.println("Password: " + passwordText.getText());
                 System.out.println("========================================");
                 
-                Intent intent = new Intent(getThis(), LoggedInActivity.class);
-                
+                Intent intent = new Intent(getThis(), AttemptingLogIn.class);
+                System.out.println("CRIOU O INTENT");
                 startActivity(intent);
             }
         });

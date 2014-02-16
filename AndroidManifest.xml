@@ -32,6 +32,12 @@
             android:label="@string/title_activity_logged_in"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name="com.example.meety_android_client.AttemptingLogIn"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_attempting_log_in"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
     </application>
 
 </manifest>
