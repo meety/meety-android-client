@@ -25,9 +25,9 @@ public class LogInScreenActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_log_in);
-		
+
 		setTextByLanguage();
-		
+
 		System.out.println("¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?");
 
 
@@ -49,18 +49,18 @@ public class LogInScreenActivity extends Activity {
         });
         **/
 	}
-	
+
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 
 	}
-	
+
 	//dummy method to set user language for texts
 	private void setTextByLanguage(){
 		userName = "username";
 	}
-	
+
 	/**
 	 * Method necessary to get this class object from an inner scope like OnClickListener
 	 * @return
@@ -68,14 +68,14 @@ public class LogInScreenActivity extends Activity {
 	private Activity getThis(){
 		return this;
 	}
-	
+
 	public void attemptLogIn(View view){
-		
+
 		// try to avoid these methods to improve performance after cliking LOG IN BUTTON
-		
+
 		final EditText userNameText = (EditText) findViewById(R.id.text_username);
 		final EditText passwordText = (EditText) findViewById(R.id.text_password);
-		
+
 		if(TextUtils.isEmpty(userNameText.getText().toString()) && TextUtils.isEmpty(passwordText.getText().toString())) {
 			userNameText.setText(userName);
 			passwordText.setText(passwordDefault);
@@ -85,7 +85,7 @@ public class LogInScreenActivity extends Activity {
         intent.putExtra("username", userNameText.getText().toString());
         intent.putExtra("password", passwordText.getText().toString());
         startActivity(intent);
-		
+
 	}
 
 }

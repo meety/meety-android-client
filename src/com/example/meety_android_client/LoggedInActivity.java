@@ -28,8 +28,8 @@ public class LoggedInActivity extends Activity {
 		// or 'missed'
 		System.out.println("Requiring meety session");
 	}
-	
-	
+
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
@@ -55,5 +55,5 @@ public class LoggedInActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	
+
 }

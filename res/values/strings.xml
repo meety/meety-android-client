@@ -11,5 +11,6 @@
     <string name="title_activity_attempting_log_in">AttemptingLogIn</string>
     <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
+    <string name="title_activity_meety_session">MeetySessionActivity</string>
 
 </resources>
