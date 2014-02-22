@@ -1,16 +1,12 @@
 package com.example.meety_android_client;
 
-import android.R.color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 
 public class AttemptingLogIn extends Activity {
 
