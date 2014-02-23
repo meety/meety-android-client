@@ -12,7 +12,14 @@
 
         <!-- First row -->
 
+        <RelativeLayout
+            android:id="@+id/maplayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8" >
 
+
+        </RelativeLayout>
 
         <!-- Second row -->
 
@@ -34,12 +41,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.9" >
+            android:layout_weight="0.8" >
 
             <TextView
-                android:id="@+id/otro"
+                android:id="@+id/logo_MS"
                 android:layout_width="match_parent"
-                android:layout_height="79dp"
+                android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -47,7 +54,7 @@
                 android:keepScreenOn="true"
                 android:text="@string/project_name"
                 android:textColor="#33b5e5"
-                android:textSize="30sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
