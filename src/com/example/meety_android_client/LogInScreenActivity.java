@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 
 /**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- * 
- * @see SystemUiHider
+ * This is the first activity of meety
+ * @author Tales Tenorio de Souza Pimentel - tales.tsp@gmail.com
+ *
  */
 public class LogInScreenActivity extends Activity {
 

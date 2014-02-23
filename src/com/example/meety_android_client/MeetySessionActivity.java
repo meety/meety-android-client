@@ -8,6 +8,11 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
+/**
+ * 
+ * @author Tales Tenorio de Souza Pimentel - tales.tsp@gmail.com
+ *
+ */
 public class MeetySessionActivity extends Activity {
 	
 	@Override

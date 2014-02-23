@@ -53,6 +53,12 @@
             android:label="@string/title_activity_meety_session"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name="com.example.meety_android_client.AttemptingMeetySession"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_attempting_meety_session"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

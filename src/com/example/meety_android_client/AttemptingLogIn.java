@@ -8,13 +8,20 @@ import android.widget.TextView;
 import android.app.Activity;
 import android.content.Intent;
 
+/**
+ * This activity is used to provide the user the information of waiting for
+ * server response in order verify the log in
+ * 
+ * @author Tales Tenorio de Souza Pimentel - tales.tsp@gmail.com
+ *
+ */
 public class AttemptingLogIn extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_attempting_log_in);
-		
+		System.out.println("AttemptingLogIn");
 		setUpActivity();
 		
 		Handler handler = new Handler();
@@ -70,8 +77,8 @@ public class AttemptingLogIn extends Activity {
 	}
 
 	private void callLoggedInActivity() {
-		Intent intent = new Intent(getThis(), LoggedInActivity.class);
-		startActivity(intent);
+		Intent intentMS = new Intent(getThis(), LoggedInActivity.class);
+		startActivity(intentMS);
 		
 	}
 
