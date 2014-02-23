@@ -1,6 +1,7 @@
 package com.example.meety_android_client;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,13 +23,6 @@ public class LoggedInActivity extends Activity {
 		setContentView(R.layout.activity_logged_in);
 
 	}
-
-	public void sessionRequest(View view) {
-		// TODO Popup window to inform that the status of the request: 'calling'
-		// or 'missed'
-		System.out.println("Requiring meety session");
-	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -54,6 +48,29 @@ public class LoggedInActivity extends Activity {
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
+	}
+	
+	/**
+	 * Send Meety Session Request
+	 * @param view
+	 */
+	public void sessionRequest(View view) {
+		// TODO Popup window to inform that the status of the request: 'calling'
+		// or 'missed'
+		
+		boolean startSession = true;
+		
+		if (startSession){
+			startMeetySession();
+			System.out.println("************************** STARTING SESSION");
+		}
+	}
+
+	private void startMeetySession() {
+		Intent intent = new Intent(this, MeetySessionActivity.class);
+		System.out.println("***** INTENT DA MEETY SESSION CREATED");
+        startActivity(intent);
+		
 	}
 
 }

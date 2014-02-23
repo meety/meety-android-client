@@ -25,7 +25,7 @@ public class AttemptingLogIn extends Activity {
 				attemptLogIn(intentFromPreviousActivity);
 			}
 
-		}, 5000);
+		}, 2000);
 		
 		//attemptLogIn(intentFromPreviousActivity);
 		
