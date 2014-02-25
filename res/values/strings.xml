@@ -6,12 +6,13 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="project_name">meety</string>
     <string name="log_in_button_name">log in</string>
-    <string name="sign_up_button_name">sign up</string>
+    <string name="sign_up_button_name">Sign up</string>
     <string name="title_activity_logged_in">LoggedInActivity</string>
     <string name="title_activity_attempting_log_in">AttemptingLogIn</string>
     <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
     <string name="title_activity_meety_session">MeetySessionActivity</string>
     <string name="title_activity_attempting_meety_session">AttemptingMeetySession</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
 
 </resources>

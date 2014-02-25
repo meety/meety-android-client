@@ -21,14 +21,14 @@ public class LogInScreenActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
 		setContentView(R.layout.activity_log_in);
-
+		
 		setTextByLanguage();
-
+		
 		System.out.println("¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?");
-
-
+		
+		
 		/**
 		final Button logInButton = (Button) findViewById(R.id.button_log_in);
 		
@@ -66,24 +66,31 @@ public class LogInScreenActivity extends Activity {
 	private Activity getThis(){
 		return this;
 	}
-
+	
 	public void attemptLogIn(View view){
-
+		
 		// try to avoid these methods to improve performance after cliking LOG IN BUTTON
-
+		
 		final EditText userNameText = (EditText) findViewById(R.id.text_username);
-		final EditText passwordText = (EditText) findViewById(R.id.text_password);
-
+		final EditText passwordText = (EditText) findViewById(R.id.text_birthdate);
+		
 		if(TextUtils.isEmpty(userNameText.getText().toString()) && TextUtils.isEmpty(passwordText.getText().toString())) {
 			userNameText.setText(userName);
 			passwordText.setText(passwordDefault);
 		}	
-
+		
         Intent intent = new Intent(getThis(), AttemptingLogIn.class);
         intent.putExtra("username", userNameText.getText().toString());
         intent.putExtra("password", passwordText.getText().toString());
         startActivity(intent);
-
+        
+	}
+	
+	
+	public void signUpScreen (View view){
+        Intent intent = new Intent(getThis(), SignUpScreenActivity.class);
+        startActivity(intent);
+		
 	}
 
 }
