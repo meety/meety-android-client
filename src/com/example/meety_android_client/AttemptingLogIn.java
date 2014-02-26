@@ -3,8 +3,12 @@ package com.example.meety_android_client;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
+import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.app.Activity;
 import android.content.Intent;
 
@@ -59,7 +63,6 @@ public class AttemptingLogIn extends Activity {
 		if(authenticated){
 			callLoggedInActivity();
 		}else{
-			
 			denyLogIn();	
 		}	
 	}
@@ -67,12 +70,28 @@ public class AttemptingLogIn extends Activity {
 	
 	private void denyLogIn() {
 		TextView logo_meety = (TextView) findViewById(R.id.logo_meety);
-		logo_meety.setTextColor(this.getResources().getColor(R.color.red_deny_login));
-		TextView text_login_fail = (TextView) findViewById(R.id.text_login_fail);
-		text_login_fail.setVisibility(View.VISIBLE);
+		logo_meety.setTextColor(this.getResources().getColor(R.color.orange_deny_login));
 		
 		ProgressBar progressBarView = (ProgressBar) findViewById(R.id.progressBarView);
 		progressBarView.setVisibility(View.GONE);
+		
+		Integer colorFrom = getResources().getColor(R.color.white);
+		Integer colorTo = getResources().getColor(R.color.orange_deny_login);
+		ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+		colorAnimation.addUpdateListener(new AnimatorUpdateListener() {
+
+		    @Override
+		    public void onAnimationUpdate(ValueAnimator animator) {
+				TextView text_login_fail = (TextView) findViewById(R.id.text_login_fail);
+				text_login_fail.setVisibility(View.VISIBLE);
+		        text_login_fail.setTextColor((Integer)animator.getAnimatedValue());
+		    }
+
+		});
+		colorAnimation.setDuration(1597); //17th fibonacci's term
+		colorAnimation.setRepeatMode(Animation.REVERSE);
+		colorAnimation.setRepeatCount(Animation.INFINITE);
+		colorAnimation.start();
 		
 	}
 

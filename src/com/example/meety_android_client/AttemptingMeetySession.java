@@ -56,7 +56,7 @@ public class AttemptingMeetySession extends Activity {
 	private void denyAnswer() {
 		TextView logo_meety = (TextView) findViewById(R.id.logo_meety_not_session);
 		logo_meety.setTextColor(this.getResources().getColor(
-				R.color.red_deny_login));
+				R.color.orange_deny_login));
 		TextView text_answer_fail = (TextView) findViewById(R.id.text_answer_fail);
 		text_answer_fail.setVisibility(View.VISIBLE);
 
