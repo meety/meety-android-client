@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -108,6 +109,15 @@ public class LoggedActivity extends Activity {
 	private void attemptMeetySession() {
 		Intent intentAttMS = new Intent(this, AttemptingMeetySessionActivity.class);
 		startActivity(intentAttMS);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+	    	System.exit(0);
+	    	//android.os.Process.killProcess(android.os.Process.myPid());
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 
 }

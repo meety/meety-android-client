@@ -2,10 +2,12 @@ package meety.client;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,7 +24,6 @@ public class MeetySessionActivity extends Activity {
 	private CameraPosition cameraPosition;
 	private Marker currentPositionMarker = null;
 	private Marker friendPositionMarker = null;
-	private Location friendLocation = null;
 
 	LatLng friendPos;
 
@@ -90,6 +91,7 @@ public class MeetySessionActivity extends Activity {
 
 	}
 
+	//Replace this method for the real method that sets real friend position
 	private LatLng setDummyFriend(Location location) {
 
 		if (friendPos == null) {
@@ -107,15 +109,18 @@ public class MeetySessionActivity extends Activity {
 		gMap.setBuildingsEnabled(true);
 
 	}
-
-	private Location setFriendLocation(Location location) {
-
-		Location friendLocation = new Location(location);
-		friendLocation.setLatitude(location.getLatitude() + 0.0001);
-		friendLocation.setLongitude(location.getLongitude() + 0.0001);
-
-		return friendLocation;
-
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+	    	
+	    	//Deve-se mandar uma mensagem avisando que o usuario fechou a MeetySession
+	    	//sendQuitMessage()
+	    	
+	        Intent intent = new Intent(this, LoggedActivity.class);
+	        startActivity(intent);
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 
 }
